@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Survey = ({setSelectedOption1,setSelectedOption2 ,setSelectedOption3, setSelectedOption4, setSelectedOption5, setSelectedOption6, setSelectedOption7, setSelectedOption8, setSelectedOption9, setSelectedOption10, setSelectedOption11, setSelectedOption12, setSelectedOption13, setSelectedOption14, setSelectedOption15, setSelectedOption16, setSelectedOption17, setSelectedOption18, setSelectedOption19, setSelectedOption20, selectedOption1, selectedOption2, selectedOption3, selectedOption4, selectedOption5, selectedOption6, selectedOption7, selectedOption8, selectedOption9, selectedOption10, selectedOption11, selectedOption12, selectedOption13, selectedOption14, selectedOption15, selectedOption16, selectedOption17, selectedOption18, selectedOption19, selectedOption20 }) => {
+const Survey = ({name, setSelectedOption1,setSelectedOption2 ,setSelectedOption3, setSelectedOption4, setSelectedOption5, setSelectedOption6, setSelectedOption7, setSelectedOption8, setSelectedOption9, setSelectedOption10, setSelectedOption11, setSelectedOption12, setSelectedOption13, setSelectedOption14, setSelectedOption15, setSelectedOption16, setSelectedOption17, setSelectedOption18, setSelectedOption19, setSelectedOption20, selectedOption1, selectedOption2, selectedOption3, selectedOption4, selectedOption5, selectedOption6, selectedOption7, selectedOption8, selectedOption9, selectedOption10, selectedOption11, selectedOption12, selectedOption13, selectedOption14, selectedOption15, selectedOption16, selectedOption17, selectedOption18, selectedOption19, selectedOption20 }) => {
   // const [selectedOption1, setSelectedOption1] = useState('');
   // const [selectedOption2, setSelectedOption2] = useState('');
   // const [selectedOption3, setSelectedOption3] = useState('');
@@ -24,6 +24,16 @@ const Survey = ({setSelectedOption1,setSelectedOption2 ,setSelectedOption3, setS
   // const [selectedOption20, setSelectedOption20] = useState('');
 
   const navigate = useNavigate();
+
+  const rot = ()=>{
+    navigate("/");
+    console.log(name);
+  }
+  if(name==undefined){
+    rot();
+  }
+
+  
   const [errorMessage, setErrorMessage] = useState('');
   const [selectedOptions, setSelectedOptions] = useState();
 

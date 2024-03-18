@@ -4,8 +4,19 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
-const Iteration1 = ({option1}) => {
+const Iteration1 = ({name, option1}) => {
   const navigate = useNavigate()
+
+
+  const rot = ()=>{
+    navigate("/");
+    console.log(name);
+  }
+  if(name==undefined){
+    rot();
+  }
+
+
   let [survey1, setSurvey1] = useState(false);
   const handleChange = (e)=>{
     e.preventDefault()

@@ -6,7 +6,13 @@ import { useNavigate } from 'react-router-dom';
 const Iteration2 = ({name, cls, srn, email, phone, option1,  selectedOption1, selectedOption2, selectedOption3, selectedOption4, selectedOption5, selectedOption6, selectedOption7, selectedOption8, selectedOption9, selectedOption10, selectedOption11, selectedOption12, selectedOption13, selectedOption14, selectedOption15, selectedOption16, selectedOption17, selectedOption18, selectedOption19, selectedOption20 }) => {
   const navigate = useNavigate()
 
-
+  const rot = ()=>{
+    navigate("/");
+    console.log(name);
+  }
+  if(name==undefined){
+    rot();
+  }
 
   let [survey1, setSurvey1] = useState(false);
   const handleChange = (e)=>{
